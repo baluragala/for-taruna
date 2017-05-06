@@ -1,0 +1,2 @@
+Synchronous I/O is a form of input/output processing that DO NOT permits other processing to continue before the transmission has finished.
+Asynchronous I/O is a form of input/output processing that permits other processing to continue before the transmission has finished.
