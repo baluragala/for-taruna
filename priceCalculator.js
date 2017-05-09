@@ -1,2 +1,4 @@
+var logger = require('./logger').logger;
 var calc = require('./calculator');
-console.log(calc.add(1,2))
+logger.info(__filename, 'Calculator program is running', [1,2]);
+console.log(calc.add(1, 2));
