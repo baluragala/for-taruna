@@ -1,3 +1,5 @@
-/**
- * Created by moksha on 10/05/17.
- */
+const fs=require('fs');
+var dirName=process.argv[2]
+fs.mkdir(dirName, function(err,data){
+	console.log(data)
+})

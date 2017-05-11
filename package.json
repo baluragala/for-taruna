@@ -13,6 +13,7 @@
   "author": "zeo",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^1.1.3"
+    "chalk": "^1.1.3",
+    "express": "^4.15.2"
   }
 }
