@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { GoodByeComponent } from './good-bye/good-bye.component'
 
+import {CourseModule} from './course/course.module'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { GoodByeComponent } from './good-bye/good-bye.component'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    CourseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

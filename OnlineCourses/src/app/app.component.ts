@@ -6,6 +6,18 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Welcome to Angular !!';
-  subTitle: string = 'by google';
+  title = 'Online Courses';
+  subTitle: string = 'by Zeolearn';
+  course = {
+    title:'Angular',
+    desc:'Front End Framework.'
+  };
+
+  getPrice(){
+    return 100;
+  }
+
+  getCourseAsString(data){
+    return JSON.stringify(data);
+  }
 }
