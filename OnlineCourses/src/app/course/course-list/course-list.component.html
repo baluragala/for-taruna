@@ -1,7 +1,20 @@
 <p>
-  course-list works!
+  Courses Enrolled: {{enrolledCourses.toString()}}
 </p>
-<app-course-list-item [course]="course1"></app-course-list-item>
+<app-course-list-item [course]="course1" (enrollEvent)="enroll($event)"></app-course-list-item>
+<app-course-list-item [course]="course2" (enrollEvent)="enroll($event)"></app-course-list-item>
+<app-course-list-item [course]="course3" (enrollEvent)="enroll($event)"></app-course-list-item>
+<app-course-list-item [course]="course4" (enrollEvent)="enroll($event)"></app-course-list-item>
+
+<hr/>
+
+<app-course-list-item
+  *ngFor="let c of courses; let i=index;let o=odd;let e=even;let f=first;let l=last"
+  [course]="c"
+  [sno]="i"
+  (enrollEvent)="enroll($event)">
+</app-course-list-item>
+
 
 <button (click)="changeCourse()">Change Course</button>
 <!--<app-course-list-item></app-course-list-item>

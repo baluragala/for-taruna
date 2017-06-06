@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { GoodByeComponent } from './good-bye/good-bye.component'
 
-import {CourseModule} from './course/course.module'
+import {CourseModule} from './course/course.module';
+import { CounterComponent } from './counter.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
-    GoodByeComponent
+    GoodByeComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
