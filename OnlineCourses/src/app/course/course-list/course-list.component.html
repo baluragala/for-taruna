@@ -1,21 +1,38 @@
 <p>
   Courses Enrolled: {{enrolledCourses.toString()}}
 </p>
+<!--
 <app-course-list-item [course]="course1" (enrollEvent)="enroll($event)"></app-course-list-item>
 <app-course-list-item [course]="course2" (enrollEvent)="enroll($event)"></app-course-list-item>
 <app-course-list-item [course]="course3" (enrollEvent)="enroll($event)"></app-course-list-item>
 <app-course-list-item [course]="course4" (enrollEvent)="enroll($event)"></app-course-list-item>
+-->
 
 <hr/>
 
-<app-course-list-item
-  *ngFor="let c of courses; let i=index;let o=odd;let e=even;let f=first;let l=last"
-  [course]="c"
-  [sno]="i"
-  (enrollEvent)="enroll($event)">
-</app-course-list-item>
-
-
+<div style="margin: 0 auto; width: 50%">
+  <input class="search" id="search" #search
+         type="text"
+         placeholder="Search courses"
+         [(ngModel)]="searchTerm"
+  >
+</div>
+<div *ngFor="let c of courses; let i=index;let o=odd;let e=even;let f=first;let l=last">
+  <!--<pre>
+    Index :{{ i }}
+    Odd : {{ o }}
+    Even: {{e}}
+    First: {{f}}
+    Last: {{l}}
+  </pre>-->
+  <app-course-list-item
+    [course]="c"
+    [sno]="i"
+    (enrollEvent)="enroll($event)"
+    (unEnrollEvent)="unEnroll($event)"
+  >
+  </app-course-list-item>
+</div>
 <button (click)="changeCourse()">Change Course</button>
 <!--<app-course-list-item></app-course-list-item>
 <app-course-list-item></app-course-list-item>
