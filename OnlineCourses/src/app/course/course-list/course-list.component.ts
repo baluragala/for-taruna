@@ -19,11 +19,14 @@ export class CourseListComponent implements OnInit {
     {title: 'Vue', author: 'Jack', image: '../../assets/images/angular.png', enrolled: false}
   ];
 
+
+
+
   toggle: boolean = false;
 
- /* toggleIt() {
-    this.toggle = !this.toggle;
-  }*/
+  /* toggleIt() {
+   this.toggle = !this.toggle;
+   }*/
 
   courses = [];
 

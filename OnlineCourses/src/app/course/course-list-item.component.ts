@@ -3,14 +3,17 @@ import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 @Component({
   selector: 'app-course-list-item',
   template: `
-    <div class="container">
+    <div class="container" [ngStyle]="unEnrollStyle">
       <img class="thumbnail left" [src]="course.image"/>
       <div class="detail">
         <h1>{{sno + 1 }} - {{course.title}}</h1>
         <h3>by {{course.author}}</h3>
-        <button *ngIf="course.enrolled === true" class="unenroll" (click)="unEnroll(course)">Un Enroll</button>
-        <button *ngIf="course.enrolled === false" class="enroll" (click)="enroll(course)">Enroll</button>
-      </div>
+        
+        <!--<button *appIf="course.enrolled === true" [ngClass]="{'unenroll':course.enrolled, 'button':true}" (click)="unEnroll(course)">Un Enroll</button>
+        <button *appIf="course.enrolled === false" class="enroll" (click)="enroll(course)">Enroll</button>
+  -->    
+     <p *appIf="course.enrolled === true">ENROLL</p>
+  </div>
     </div>
   `,
   styles: [
@@ -37,14 +40,14 @@ import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
      margin-bottom: 5px;
      }`,
     `
-.unenroll{
+    .unenroll{
      width: 150px;
      height: 40px;
-     background-color: tomato;
+     background-color: crimson;
       font-size: 1.7em;
       margin-bottom: 5px;
      }
-`
+`, `.button { border-bottom: 10px solid yellow}`
   ]
 })
 export class CourseListItemComponent implements OnInit {
@@ -57,6 +60,8 @@ export class CourseListItemComponent implements OnInit {
   @Output() enrollEvent: EventEmitter<{title: string, author: string, image: string}> = new EventEmitter();
   @Output() unEnrollEvent: EventEmitter<{title: string, author: string, image: string}> = new EventEmitter();
 
+  unEnrollStyle;
+
 
   constructor() {
   }
@@ -66,6 +71,7 @@ export class CourseListItemComponent implements OnInit {
 
   ngOnChanges() {
     console.log('Course', this.course);
+    this.unEnrollStyle = this.course.enrolled ? {'background-color': 'cyan'} : {'background-color': 'lightseagreen'};
   }
 
   enroll(course) {

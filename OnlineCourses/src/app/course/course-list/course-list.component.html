@@ -1,6 +1,14 @@
-<p>
+<p appHidden>
   Courses Enrolled: {{enrolledCourses.toString()}}
 </p>
+
+<h1 appHidden>Course List</h1>
+
+<ul>
+  <li *appFor="5">
+    Angular 2
+  </li>
+</ul>
 <!--
 <app-course-list-item [course]="course1" (enrollEvent)="enroll($event)"></app-course-list-item>
 <app-course-list-item [course]="course2" (enrollEvent)="enroll($event)"></app-course-list-item>
