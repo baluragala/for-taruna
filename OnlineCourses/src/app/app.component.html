@@ -1,5 +1,13 @@
 <h1>{{title}}</h1>
-<app-course-list></app-course-list>
+
+{{ today | date:'medium' | uppercase }}
+
+<p>{{ 1000 | currency:'GBP':true }}</p>
+
+<p> {{ 5 | powerof:3 }}</p>
+
+
+<!--<app-course-list></app-course-list>-->
 
 <!-- Interpolation -->
 <!--<h1>{{title}}</h1>

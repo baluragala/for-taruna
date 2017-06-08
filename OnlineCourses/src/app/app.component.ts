@@ -9,15 +9,17 @@ export class AppComponent {
   title = 'Online Courses';
   subTitle: string = 'by Zeolearn';
   course = {
-    title:'Angular',
-    desc:'Front End Framework.'
+    title: 'Angular',
+    desc: 'Front End Framework.'
   };
 
-  getPrice(){
+  today = Date.now();
+
+  getPrice() {
     return 100;
   }
 
-  getCourseAsString(data){
+  getCourseAsString(data) {
     return JSON.stringify(data);
   }
 }

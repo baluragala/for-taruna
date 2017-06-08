@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { SharedModule } from './shared/shared.module'
+
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { GoodByeComponent } from './good-bye/good-bye.component'
@@ -21,7 +23,8 @@ import { CounterComponent } from './counter.component'
     BrowserModule,
     FormsModule,
     HttpModule,
-    CourseModule
+    CourseModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
