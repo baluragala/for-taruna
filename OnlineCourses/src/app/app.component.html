@@ -1,10 +1,18 @@
 <h1>{{title}}</h1>
-
-{{ today | date:'medium' | uppercase }}
+<nav>
+  <ul>
+    <li><a routerLink="/hello" [routerLinkActive]="['active','abc']">Hello</a></li>
+    <li><a routerLink="/good-bye" routerLinkActive="active">Good Bye</a></li>
+    <li><a routerLink="/counter" routerLinkActive="active">Counter</a></li>
+    <li><a routerLink="/courses" routerLinkActive="active">Courses</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+<!--{{ today | date:'medium' | uppercase }}
 
 <p>{{ 1000 | currency:'GBP':true }}</p>
 
-<p> {{ 5 | powerof:3 }}</p>
+<p> {{ 5 | powerof:3 }}</p>-->
 
 
 <!--<app-course-list></app-course-list>-->

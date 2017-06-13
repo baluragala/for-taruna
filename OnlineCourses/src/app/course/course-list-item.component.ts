@@ -6,7 +6,7 @@ import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
     <div class="container" [ngStyle]="unEnrollStyle">
       <img class="thumbnail left" [src]="course.image"/>
       <div class="detail">
-        <h1>{{sno + 1 }} - {{course.title}}</h1>
+        <h1><a [routerLink]="['/courses',course.id,'t',course.title]" [queryParams]="{one:1,two:2}">{{sno + 1 }} - {{course.title}}</a></h1>    
         <h3>by {{course.author}}</h3>
         
         <!--<button *appIf="course.enrolled === true" [ngClass]="{'unenroll':course.enrolled, 'button':true}" (click)="unEnroll(course)">Un Enroll</button>

@@ -13,13 +13,11 @@ export class CourseListComponent implements OnInit {
   course4 = {title: 'Vue', author: 'Jack', image: '../../assets/images/angular.png', enrolled: false};
 
 
-  staticCourses = [{title: 'React', author: 'Jack', image: '../../assets/images/angular.png', enrolled: false},
-    {title: 'Angular', author: 'Jack', image: '../../assets/images/angular.png', enrolled: true},
-    {title: 'Ember', author: 'Jack', image: '../../assets/images/angular.png', enrolled: false},
-    {title: 'Vue', author: 'Jack', image: '../../assets/images/angular.png', enrolled: false}
+  staticCourses = [{id: 1, title: 'React', author: 'Jack', image: '../../assets/images/angular.png', enrolled: false},
+    {id: 2, title: 'Angular', author: 'Jack', image: '../../assets/images/angular.png', enrolled: true},
+    {id: 3, title: 'Ember', author: 'Jack', image: '../../assets/images/angular.png', enrolled: false},
+    {id: 4, title: 'Vue', author: 'Jack', image: '../../assets/images/angular.png', enrolled: false}
   ];
-
-
 
 
   toggle: boolean = false;
